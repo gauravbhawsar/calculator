@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <link rel="stylesheet" href="./styles.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/a22541818d.js" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        
+        <div class="row">
+          
+          <div class="col col-lg-3 col-md-3 col-sm-3">
+            <h2 style="margin-left: 50px;">CALCULATOR</h2>
+          
+            <input type="text" class="clac" id="calstr" placeholder="0">
+
+            <table class="tab">
+               
+                <thead>
+                  <tr>
+                    <th ><button class="btn" onclick="calstr.value=''" ondblclick="clea();">AC</button></th>
+                    <th ><button class="btn" onclick="backspace(calstr.value);"><i class="fas fa-backspace"></i></button></th>
+                    <th ><button class="btn" onclick="power(calstr.value);"><i class="fas fa-superscript"></i></button></th>
+                    <th ><button class="btn" onclick="add('/')"><i class="fas fa-divide"></i></button></th>
+                    
+
+            
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th ><button class="btn" onclick="add('7')">7</button></th>
+                    <th ><button class="btn"onclick="add('8')">8</button></th>
+                    <th ><button class="btn" onclick="add('9')">9</button></th>
+                    <th ><button class="btn" onclick="add('*')" ><i class="fas fa-times"></i></button></th> 
+                  </tr>
+                  <tr>
+                    <th ><button class="btn" onclick="add('4')">4</button></th>
+                    <th ><button class="btn" onclick="add('5')">5</button></th>
+                    <th ><button class="btn" onclick="add('6')">6</button></th>
+                    <th ><button class="btn" onclick="add('-')" ><i class="fas fa-minus"></i></button></th> 
+                  </tr>
+                  <tr>
+                    <th ><button class="btn" onclick="add('1')">1</button></th>
+                    <th ><button class="btn" onclick="add('2')">2</button></th>
+                    <th ><button class="btn" onclick="add('3')">3</button></th>
+                    <th ><button class="btn"onclick="add('+')"><i class="fas fa-plus"></i></button></th> 
+                  </tr>
+                  <tr>
+                    <th ><button class="btn" onclick="add('00')">00</button></th>
+                    <th ><button class="btn" onclick="add('0')">0</button></th>
+                    <th ><button class="btn" onclick="add('.')">.</button></th>
+                    <th ><button class="btn" onclick="operation(calstr.value);"><i class="fas fa-equals"></i></button></th> 
+                  </tr>
+                </tbody>
+              </table>
+          </div>
+          <div class="col col-lg-3 col-md-3 col-sm-3" class="hi">
+            <table>
+              <th rowspan="4" id="history"> <h1>HISTORY</h1> <ol id="list"> </ol></th>
+            </table>
+          </div>
+
+        </div>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="main.js"></script>
+    </body>
+</html>
